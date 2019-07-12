@@ -7,3 +7,4 @@ Debian has no i3-gapps, witch make's me sufer everytime I need to install i3. So
 
 ### ScreenShots
 ![default_screenshot](resources/img/default_screenshot.png "Visualização de tela cheia")
+# Qi3DC
