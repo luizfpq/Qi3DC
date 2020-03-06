@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 
+#
 # ScriptName        : setup.sh
-# Description       : 
-# Args              : 
+# Description       :
+# Args              :
 # Author            : LuizQuirino
 # Email             : luizfpq@gmail.com
 # Since             : 0.0.1 2020-01-15
@@ -13,7 +13,8 @@
 
 source ./resources/shell/link_config_files.sh
 source ./resources/shell/powerline.sh
+source ./resources/shell/i3-gapps.sh
 
+i3-gapps
 link_config_files
-
 installPowerline

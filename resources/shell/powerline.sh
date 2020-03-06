@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
+#
+# ScriptName        : powerline.sh
+# Description       :
+# Args              :
+# Author            : LuizQuirino
+# Email             : luizfpq@gmail.com
+# Since             : 0.0.1 2020-01-15
+# Version           : 0.0.1 2020-01-15
 
 installPowerline() {
   cd /tmp &&
