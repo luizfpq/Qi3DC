@@ -11,5 +11,6 @@ link_config_files() {
 
     #config base folder
     cp -Rfv ./resources/.config ~/
+    
 
 }
