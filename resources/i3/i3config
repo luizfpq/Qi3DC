@@ -219,7 +219,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #000000
 client.background       #FFFFFF
 
 bar {
-  status_command i3status --config ~/.Qi3DC/i3status.conf
+  status_command i3status --config /home/quirino/.config/i3/i3status.conf
   i3bar_command i3bar --transparency
   colors {
     #6f on bgcolor defines the transparency level
