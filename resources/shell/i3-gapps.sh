@@ -12,15 +12,15 @@
 i3-gapps() {
   pip install setuptools
   rm -rf i3-gapps
-  git clone https://www.github.com/Airblader/i3 i3-gaps
+  cd /tmp
+  git clone https://github.com/luizfpq/i3 i3-gaps
   cd i3-gaps
-  git checkout gaps && git pull
+  git checkout gaps-next && git pull
   autoreconf --force --install
   rm -rf build
   mkdir build
-  cd build 
-  ../configure --prefix=/usr --sysconfdir=/etc
+  cd build
+  ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
   make
   sudo make install
-  cd .. && rm -rf i3-gapps
 }

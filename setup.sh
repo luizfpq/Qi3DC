@@ -12,7 +12,7 @@
 # permitindo que os arquivos fiquem confinados todos dentro de ~/.Qi3DC
 
 source ./resources/shell/link_config_files.sh
-source ./resources/shell/powerline.sh
+#source ./resources/shell/powerline.sh
 source ./resources/shell/i3-gapps.sh
 source ./resources/shell/systemTools.sh
 
