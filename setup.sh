@@ -8,6 +8,12 @@
 # Since             : 0.0.1 2020-01-15
 # Version           : 0.0.1 2020-01-15
 
+
+# EM TESTES
+# Tentamos garantir que o script seja executado no diretório onde ele está localizado
+cd "$(dirname "$0")" || exit 1
+
+
 # Criando links simbólicos para os arquivos de configuração
 # permitindo que os arquivos fiquem confinados todos dentro de ~/.Qi3DC
 
