@@ -11,11 +11,58 @@ u="$USER"
 
 link_config_files() {
 
-    #config base folder
-    cp -Rfv $PWD/resources/.config ~/
-    cp -Rfv $PWD/resources/.bashrc
-    cp -Rfv $PWD/resources/.fehbg
-    cp -Rfv $PWD/resources/img/* ~/Imagens
-    
+    # Verificar se a pasta de recursos existe
+    if [ ! -d "$PWD/resources" ]; then
+        echo "Erro: A pasta '$PWD/resources' não existe."
+        exit 1
+    fi
 
+    # Verificar se a pasta de configuração base existe
+    if [ ! -d "$PWD/resources/.config" ]; then
+        echo "Erro: A pasta '$PWD/resources/.config' não existe."
+        exit 1
+    fi
+
+    # Verificar se a pasta de imagens existe
+    if [ ! -d "$PWD/resources/img" ]; then
+        echo "Erro: A pasta '$PWD/resources/img' não existe."
+        exit 1
+    fi
+
+    # Verificar se o diretório de destino (Imagens) existe
+    if [ ! -d ~/Imagens ]; then
+        echo "Erro: A pasta '~/Imagens' não existe. Criando a pasta..."
+        mkdir -p ~/Imagens
+    fi
+
+    # Verificar se o diretório de destino (config) existe
+    if [ ! -d ~/".config" ]; then
+        echo "Erro: A pasta '~/'.config não existe. Criando a pasta..."
+        mkdir -p ~/.config
+    fi
+
+    # Verificar se o arquivo de destino .bashrc existe
+    if [ ! -f ~/".bashrc" ]; then
+        echo "Erro: O arquivo '~/".bashrc' não existe."
+        exit 1
+    fi
+
+    # Verificar se o arquivo de destino .fehbg existe
+    if [ ! -f ~/".fehbg" ]; then
+        echo "Erro: O arquivo '~/".fehbg' não existe."
+        exit 1
+    fi
+
+    # Copiar os arquivos se as verificações passarem
+    echo "Copiando arquivos de configuração..."
+    cp -Rfv $PWD/resources/.config ~/
+    cp -Rfv $PWD/resources/.bashrc ~/
+    cp -Rfv $PWD/resources/.fehbg ~/
+    cp -Rfv $PWD/resources/img/* ~/Imagens
+
+    echo "Arquivos copiados com sucesso!"
 }
+
+# Chamada da função
+#link_config_files
+
